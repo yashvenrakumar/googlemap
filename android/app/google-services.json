@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "48787323574",
+    "firebase_url": "https://koshishproject.firebaseio.com",
+    "project_id": "koshishproject",
+    "storage_bucket": "koshishproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:48787323574:android:f91007d8032c6289460417",
+        "android_client_info": {
+          "package_name": "com.recabn.koshish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "48787323574-qkpvfq243g0pf743pnu4m925qqrj2s6q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.recabn.koshish",
+            "certificate_hash": "c9e4d357d240b5307b1411120321acd494a13ea6"
+          }
+        },
+        {
+          "client_id": "48787323574-acs1vlisqi1o5cii2qfmp14gd27d1fh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1xKHAcBiH-GwdlS2D8gfTgsWHUg_o77k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "48787323574-acs1vlisqi1o5cii2qfmp14gd27d1fh9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
