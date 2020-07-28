@@ -1,3 +1,41 @@
+import 'package:flutter/material.dart';
+
+import 'enteritem.dart';
+
+class Shopp extends StatefulWidget {
+  @override
+  _ShoppState createState() => _ShoppState();
+}
+
+class _ShoppState extends State<Shopp> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.orange),
+        backgroundColor: Colors.orange[50],
+        centerTitle: true,
+        title: Text(
+          "Your Shop",
+          style: TextStyle(color: Colors.orange),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.orange[50],
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => EnterItem()));
+        },
+        child: Icon(
+          Icons.add,
+          size: 30,
+          color: Colors.orange,
+        ),
+      ),
+    );
+  }
+}
+
 // import 'package:flutter/material.dart';
 // import 'package:image_picker/image_picker.dart';
 // import 'package:firebase_storage/firebase_storage.dart';
@@ -7,10 +45,11 @@
 
 // class EnterItem extends StatefulWidget {
 //   @override
-//   _EnterItemState createState() => _EnterItemState();
+//    _EnterItemState createState() => _EnterItemState();
 // }
 
 // class _EnterItemState extends State<EnterItem> {
+//   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 //   int i = 1;
 //   File _image;
 //   File _image1;
@@ -219,6 +258,10 @@
 //                                 } else {
 //                                   _startUpload();
 //                                   showColoredToast();
+//                                   _scaffoldKey.currentState.showSnackBar(
+//                                       new SnackBar(
+//                                           content:
+//                                               new Text('uploaded the file')));
 //                                 }
 //                               },
 //                               child: CircleAvatar(
@@ -712,8 +755,16 @@
 //           ),
 
 //           // details
+
+//           _dDeitem(),
 //         ],
 //       ),
 //     );
 //   }
+// }
+
+// Widget _dDeitem() {
+//   return Container(
+//     color: Colors.orange[50],
+//   );
 // }

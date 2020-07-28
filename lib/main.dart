@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:koshish/texting/test.dart';
-import 'fawwaz/googlemap.dart';
+import 'package:koshish/mywork.dart';
+
+//import 'animation/ani.dart';
 // import 'package:koshish/tabbar/categary.dart';
 // import 'package:koshish/tabbar/local.dart';
 // import 'package:koshish/tabbar/offer.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Yash(),
+      home: MyWork(),
     );
   }
 }

@@ -1,10 +1,11 @@
+// ignore: unused_import
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:koshish/fawwaz/fawwazzz/details.dart';
 import 'package:koshish/fawwaz/fawwazzz/fawwaz_model.dart';
-import 'package:koshish/fawwaz/fawwazzz/fawwazontap.dart';
-
-import 'package:koshish/searchbar/search.dart';
+import 'package:koshish/tabbar/searchbar/search.dart';
+//import 'package:koshish/fawwaz/fawwazzz/fawwazontap.dart';
 
 class Fawwazfavo extends StatefulWidget {
   @override
@@ -20,27 +21,51 @@ class _FawwazfavoState extends State<Fawwazfavo> {
 
   int prevPage;
 
+  //int ya=0;
+
   @override
   void initState() {
     super.initState();
     coffeeShops.forEach((element) {
-      String img = element.thumbNail;
-      String add = element.address;
-      String des = element.description;
-      var cood = element.locationCoords;
-      String shop = element.shopName;
+      // String img = element.thumbNail;
+      // String add = element.address;
+      // String des = element.description;
+      // var cood = element.locationCoords;
+      // String shop = element.shopName;
+      int yaa = element.i;
 
       allMarkers.add(Marker(
           markerId: MarkerId(element.shopName),
           draggable: false,
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => Fawontap(img, add, des, cood, shop)));
+            _pageController.jumpToPage(yaa - 1);
+
+            //   for (var i = 1; i <= coffeeShops.length; i++) {
+            //     if (i == ya) {
+            //       // setState(() {
+            //       //   current = ya;
+            //       // });
+            // _pageController.jumpToPage(ya);
+            //     }
+            //   }
+
+            // Navigator.of(context).push(MaterialPageRoute(
+            //     builder: (context) => Fawontap(img, add, des, cood, shop)));
           },
           infoWindow: InfoWindow(
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => Fawontap(img, add, des, cood, shop)));
+                _pageController.jumpToPage(yaa);
+
+                //   for (var i = 1; i <= coffeeShops.length; i++) {
+                //     if (i == ya) {
+                //       // setState(() {
+                //       //   current = i;
+                //       // });
+                //       _pageController.jumpToPage(ya);
+                //     }
+                //   }
+                // Navigator.of(context).push(MaterialPageRoute(
+                //     builder: (context) => Fawontap(img, add, des, cood, shop)));
               },
               title: element.shopName,
               snippet: element.address),
@@ -91,56 +116,10 @@ class _FawwazfavoState extends State<Fawwazfavo> {
               width: MediaQuery.of(context).size.width,
               color: Colors.orange,
               margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-
               child: Image.network(
                 coffeeShops[index].thumbNail,
                 fit: BoxFit.fill,
               ),
-
-              // child: Container(
-              //     decoration: BoxDecoration(
-              //         borderRadius: BorderRadius.circular(10.0),
-              //         color: Colors.white),
-              //     child: Row(children: [
-              //       Container(
-              //           height: 200.0,
-              //           width: MediaQuery.of(context).size.width - 10,
-              //           decoration: BoxDecoration(
-              //               borderRadius: BorderRadius.only(
-              //                   bottomLeft: Radius.circular(10.0),
-              //                   topLeft: Radius.circular(10.0)),
-              //               image: DecorationImage(
-              //                   image: NetworkImage(
-              //                       coffeeShops[index].thumbNail),
-              //                   fit: BoxFit.cover))),
-              //       SizedBox(width: 5.0),
-              // Column(
-              //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     children: [
-              //       Text(
-              //         coffeeShops[index].shopName,
-              //         style: TextStyle(
-              //             fontSize: 12.5,
-              //             fontWeight: FontWeight.bold),
-              //       ),
-              //       Text(
-              //         coffeeShops[index].address,
-              //         style: TextStyle(
-              //             fontSize: 12.0,
-              //             fontWeight: FontWeight.w600),
-              //       ),
-              //       Container(
-              //         width: 170.0,
-              //         child: Text(
-              //           coffeeShops[index].description,
-              //           style: TextStyle(
-              //               fontSize: 11.0,
-              //               fontWeight: FontWeight.w300),
-              //         ),
-              //       )
-              //     ])
-              //  ]))
             ),
           )),
     );
@@ -250,28 +229,4 @@ class _FawwazfavoState extends State<Fawwazfavo> {
         bearing: 45.0,
         tilt: 45.0)));
   }
-
-  // Widget _buildContainer() {
-  //   return Align(
-  //     alignment: Alignment.topLeft,
-  //     child: Container(
-  //       color: Colors.transparent,
-  //       height: 100.0,
-  //       margin: EdgeInsets.fromLTRB(10, 0, 10, 2),
-  //       width: 100,
-  //       child: Container(
-  //         height: 100,
-  //         width: 100,
-  //         color: Colors.orange,
-  //       ),
-  //       // child: PageView.builder(
-  //       //   controller: _pageController,
-  //       //   itemCount: coffeeShops.length,
-  //       //   itemBuilder: (BuildContext context, int index) {
-  //       //     return _coffeeShopList(index);
-  //       //   },
-  //       // ),
-  //     ),
-  //   );
-  // }
 }

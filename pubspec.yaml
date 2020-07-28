@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_plugin_android_lifecycle:
-
+  
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
@@ -63,7 +63,36 @@ dev_dependencies:
   fluster:
   flutter_cache_manager:
   image: 
+  liquid_swipe:
+  image_sequence_animator:
+
+
+  swipe_back_detector:
+  swipe_up_menu:
+  flutter_slidable_list_view:
+  swipe_gesture_recognizer:
+  simple_gesture_detector:
+  flutter_tindercard:
+  curved_navigation_bar:
+  swipeable_card:
+  swipe_stack:
+  undo:
+  pimp_my_button:
+  like_button:
+  flutter_styled_toast:
+  outline_gradient_button:
+  chess_vectors_flutter:
+
+  tflite:
+  firebase_livestream_ml_vision:
+
+
+ 
+  flutter_login:
+  flutter_auth_buttons:
    
+
+ 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -81,6 +110,17 @@ flutter:
     - assets/yash.jpg
     - assets/mlogo.jpg
     - assets/mmlogo.jpg
+    - assets/covid.png
+    - assets/vultures.png
+    - assets/vulture.png
+    - assets/map-min.png
+    - assets/map.png
+    - assets/leopard.png
+    - assets/leopards.png
+    - asset/labels.txt
+    - asset/model_unquant.tflite
+    - asset/mnist.txt
+    - asset/mnist.tflite
      
 
   # An image asset can refer to one or more resolution-specific "variants", see

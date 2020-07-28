@@ -103,6 +103,7 @@
 //   }
 // }
 
+// // ignore: must_be_immutable
 // class WelcomeUserWidget extends StatelessWidget {
 //   GoogleSignIn _googleSignIn;
 //   FirebaseUser _user;

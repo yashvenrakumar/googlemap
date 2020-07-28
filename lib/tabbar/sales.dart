@@ -1,10 +1,10 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-// class Sale extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       color: Colors.amber,
-//     );
-//   }
-// }
+class Sale extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.amber,
+    );
+  }
+}
